@@ -7,6 +7,12 @@
   font-family: Poppins;
 }
 
+:root {
+  --dark-color: #1a1e21;
+  --dark-color-rgba: #1a1e2167;
+  --main-color: rgb(215, 161, 61);
+}
+
 .main {
   color: orange;
 }

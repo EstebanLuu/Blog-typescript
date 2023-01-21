@@ -14,9 +14,13 @@
   cursor: pointer;
 }
 
-.active {
+.layout__category__active {
   background-color: var(--main-color);
   color: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 // POSTS

@@ -16,7 +16,7 @@ const Categories: React.FC<CategoriesInterface> = () => {
       <div className="layout__categories">
         <span
           className={`${
-            category === 1 ? "layout__category active" : "layout__category"
+            category === 1 ? "layout__category__active" : "layout__category"
           }`}
           onClick={() => handleChange(1)}
         >
@@ -24,7 +24,7 @@ const Categories: React.FC<CategoriesInterface> = () => {
         </span>
         <span
           className={`${
-            category === 2 ? "layout__category active" : "layout__category"
+            category === 2 ? "layout__category__active" : "layout__category"
           }`}
           onClick={() => handleChange(2)}
         >
@@ -32,7 +32,7 @@ const Categories: React.FC<CategoriesInterface> = () => {
         </span>
         <span
           className={`${
-            category === 3 ? "layout__category active" : "layout__category"
+            category === 3 ? "layout__category__active" : "layout__category"
           }`}
           onClick={() => handleChange(3)}
         >
@@ -40,7 +40,7 @@ const Categories: React.FC<CategoriesInterface> = () => {
         </span>
         <span
           className={`${
-            category === 4 ? "layout__category active" : "layout__category"
+            category === 4 ? "layout__category__active" : "layout__category"
           }`}
           onClick={() => handleChange(4)}
         >
@@ -48,7 +48,7 @@ const Categories: React.FC<CategoriesInterface> = () => {
         </span>
         <span
           className={`${
-            category === 5 ? "layout__category active" : "layout__category"
+            category === 5 ? "layout__category__active" : "layout__category"
           }`}
           onClick={() => handleChange(5)}
         >

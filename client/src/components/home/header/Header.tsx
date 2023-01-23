@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.scss";
+import { estebanselacome } from "../footer";
 
 const Header = () => {
   return (

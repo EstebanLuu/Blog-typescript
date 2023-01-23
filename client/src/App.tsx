@@ -1,7 +1,7 @@
 import React from "react";
-import { Home } from "./components/home";
+import { Home } from "./pages/home";
+import { Detail } from "./pages/Detail";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Culture } from "./components/categories";
 
 // En esta aplicacion tenemos conceptos de typescript
 
@@ -13,7 +13,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />;
-        <Route path="/culture" element={<Culture />} />
+        <Route path="/detail" element={<Detail />} />;
       </Routes>
     </BrowserRouter>
   );

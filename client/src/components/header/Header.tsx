@@ -1,6 +1,5 @@
 import React from "react";
 import "./Header.scss";
-import { estebanselacome } from "../footer";
 
 const Header = () => {
   return (
@@ -13,7 +12,9 @@ const Header = () => {
       </div>
       <div className="nav__presentation">
         <h2 className="nav__presentation__title">Typescript Blog</h2>
-        <h4 className="nav__presentation__subtitle">El mejor blog de habla hispana</h4>
+        <h4 className="nav__presentation__subtitle">
+          El mejor blog de habla hispana
+        </h4>
       </div>
     </div>
   );

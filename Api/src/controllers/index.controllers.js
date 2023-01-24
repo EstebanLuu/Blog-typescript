@@ -1,11 +1,23 @@
 import { Postblogs } from "../models/posts.js";
+import { User } from "../models/users.js";
 
-export const getUsers = (req, res) => {
-  res.send("users");
+export const getUsers = async (req, res) => {
   try {
-    console.log("alguien entro a los users");
+    const Users = await User.findAll();
+    console.log(Users);
+    res.json(Users);
   } catch (error) {
-    console.log(error);
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+export const createUser = async (req, res) => {
+  try {
+    const { name, email, password } = req.body;
+    const newUser = await User.create({ name, email, password });
+    res.json(newUser);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
   }
 };
 
@@ -18,20 +30,17 @@ export const getPosts = (req, res) => {
   }
 };
 
-export const createPosts = async(req, res) => {
+export const createPosts = async (req, res) => {
   console.log(req.body);
   const { title, description, img } = req.body;
   try {
     const newPost = await Postblogs.create({
-      title:title,
+      title: title,
       description: description,
       img: img,
-
-
-    })
-    console.log(newPost)
+    });
+    console.log(newPost);
     res.send("se creó el post");
-
   } catch (error) {
     console.log(error);
   }

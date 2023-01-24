@@ -1,13 +1,8 @@
 import { Router } from "express";
+import { getPosts } from "../controllers/index.controllers.js";
 
-const Post = Router()
+const Post = Router();
 
-Post.get("/:id",async(req,res)=>{
-    try {
-        console.log("alguien entro al post")
-    } catch (error) {
-        console.log(error)
-    }
-})
+Post.get("/", getPosts);
 
-export default Post
+export default Post;

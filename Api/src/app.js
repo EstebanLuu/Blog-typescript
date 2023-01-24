@@ -1,8 +1,8 @@
 import express from "express";
-import blogsRoutes from "./routes/index.js"
+import blogsRoutes from "./routes/index.js";
 
 const app = express();
 
-app.use(blogsRoutes)
+app.use(blogsRoutes);
 
 export default app;

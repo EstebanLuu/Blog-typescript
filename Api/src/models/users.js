@@ -1,9 +1,9 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/db.js";
-import {Postblogs} from "./posts.js"
+import { Postblogs } from "./posts.js";
 
 export const User = sequelize.define(
-  "users",
+  "user",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -34,11 +34,14 @@ export const User = sequelize.define(
   }
 );
 
-User.hasMany(Postblogs,{
-  foreignKey: "PostID",
-  sourceKey: "id"
-})
+User.hasMany(Postblogs, {
+  foreignKey: "UserId",
+  sourceKey: "id",
+});
 
-Postblogs.belongsTo(User,)
+Postblogs.belongsTo(User, {
+  foreignKey: "UserId",
+  targetId: "id",
+});
 
-export const Models = sequelize.models; 
+export const Models = sequelize.models;

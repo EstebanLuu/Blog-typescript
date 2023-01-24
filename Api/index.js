@@ -2,11 +2,12 @@
 
 import { sequelize } from "./src/database/db.js";
 import app from "./src/app.js";
-import "./src/models/posts.js";
+// import "./src/models/posts.js";
+// import "./src/models/users.js"
 
 async function main() {
   try {
-    await sequelize.sync({ force: true });
+    await sequelize.sync({ force: false });
     console.log("La conexion se hizo con exito");
     app.listen(3000);
     console.log("Servidor iniciado en localhost:", 3000);

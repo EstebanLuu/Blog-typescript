@@ -1,0 +1,43 @@
+.post__header {
+  width: 100%;
+  height: 200px;
+  background-color: var(--dark-color);
+}
+
+.post__container {
+  max-width: 800px;
+  margin: auto;
+  width: 100%;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back__home {
+  color: var(--main-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.header__title {
+  width: 90%;
+  font-size: 2.6rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.header__img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.post__content {
+  padding-top: 5rem !important;
+}

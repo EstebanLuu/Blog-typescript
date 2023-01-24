@@ -1,15 +1,11 @@
 import React from "react";
-import "./Header.scss";
+import "./header.scss";
+import Nav from "./Nav";
 
 const Header = () => {
   return (
     <div className="navbar">
-      <div className="nav__header">
-        <span className="nav__title">
-          Blog<span className="main">Typescript</span>
-        </span>
-        <button className="nav__login">Login</button>
-      </div>
+      <Nav />
       <div className="nav__presentation">
         <h2 className="nav__presentation__title">Typescript Blog</h2>
         <h4 className="nav__presentation__subtitle">

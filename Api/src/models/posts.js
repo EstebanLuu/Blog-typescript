@@ -15,8 +15,13 @@ export const Postblogs = sequelize.define(
     description: {
       type: DataTypes.STRING,
     },
+    img: {
+      type: DataTypes.STRING,
+    },
   },
   {
     timestamps: true,
   }
 );
+
+export const Models = sequelize.models; 

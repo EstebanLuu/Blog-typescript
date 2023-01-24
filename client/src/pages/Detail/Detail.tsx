@@ -19,10 +19,10 @@ const Detail = () => {
           <h1 className="header__title">
             How to create Best UX Design with adobe
           </h1>
-          <img src={tomi} alt="" />
+          <img src={tomi} alt="" className="header__img" />
         </div>
       </section>
-      <section className="post__container post__content">
+      <section className="post__container__details post__content">
         <h2 className="sub__heading">Create UX Design </h2>
         <p className="post__text">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -65,7 +65,31 @@ const Detail = () => {
           natus quod nam aspernatur nobis voluptas in delectus, cum laboriosam
           cumque consequatur a.
         </p>
+        <div className="share post__container">
+          <span className="share__title">Share This Article</span>
+
+          <div className="social">
+            <a href="#">
+              <i className="bx bxl-facebook"></i>
+            </a>
+            <a href="#">
+              <i className="bx bxl-twitter"></i>
+            </a>
+            <a href="#">
+              <i className="bx bxl-instagram"></i>
+            </a>
+            <a href="#">
+              <i className="bx bxl-linkedin"></i>
+            </a>
+            <a href="#">
+              <i className="bx bxl-whatsapp"></i>
+            </a>
+          </div>
+        </div>
       </section>
+
+      {/* share */}
+
       <Footer />
     </>
   );

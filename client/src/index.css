@@ -17,4 +17,11 @@
   color: orange;
 }
 
+.nav__link {
+  text-decoration: none;
+}
 
+::selection {
+  color: #fff;
+  background-color: var(--main-color);
+}

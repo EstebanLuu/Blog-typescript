@@ -24,4 +24,4 @@ export const Postblogs = sequelize.define(
   }
 );
 
-export const Models = sequelize.models; 
+export const Models = sequelize.models;

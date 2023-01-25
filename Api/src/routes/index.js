@@ -1,7 +1,8 @@
 import { Router } from "express";
 import express from "express";
 import Post from "./post.js";
-import Users from "./usersLogin.js";
+import Users from "./users.js";
+import auth from "./auth.js";
 
 const router = Router();
 
@@ -13,5 +14,6 @@ router.use(express.urlencoded({ extended: true }));
 
 router.use("/posts", Post);
 router.use("/users", Users);
+router.use("/auth", auth);
 
 export default router;

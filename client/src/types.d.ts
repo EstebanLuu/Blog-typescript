@@ -7,3 +7,9 @@ export type user = {
   description: string;
   img: string;
 };
+
+export type userRegister = {
+  name: string;
+  email: string;
+  password: string;
+};

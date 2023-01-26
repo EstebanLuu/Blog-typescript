@@ -1,12 +1,15 @@
 import { LOGIN, REGISTER } from "../types";
 
 const INITIAL_STATE = {
-  users: [],
-  loggedIn: false,
-  posts: [],
+  name: "",
+  email: "",
+  password: "",
+  genre: "",
+  description: "",
+  img: "",
 };
 
-export default function userAuth(state = INITIAL_STATE, action) {
+export default function userAuth(state = INITIAL_STATE, action: any) {
   switch (action.type) {
     case LOGIN:
       return {

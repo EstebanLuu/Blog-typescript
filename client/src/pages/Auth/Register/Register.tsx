@@ -1,12 +1,47 @@
-import { useState } from "react";
+import { useEffect, useState  ,ChangeEvent, SyntheticEvent, } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "../style.scss";
+import { userRegister } from "@/types";
+import { createStore } from "redux";
+import { registerUser } from "@/redux/actions/actions";
 
 export const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const state = useSelector((state: typeof createStore) => state);
+  const dispatch = useDispatch();
 
+  // useEffect(() => {
+  //   console.log(state);
+  // }, []);
+
+  const [input, setInput] = useState<userRegister>({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (
+    event: ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    setInput({ ...input, [event.target.name]: event.target.value });
+    
+  };
+
+  const handleSubmit = (event: SyntheticEvent) => {
+    event.preventDefault();
+    setInput({
+      name: "",
+      email: "",
+      password: "",
+    });
+   
+    }
+  };
   return (
     <div className="login-container">
       <div className="login__about-container"></div>
@@ -57,17 +92,13 @@ export const Register = () => {
                 {/* {error && <span>"error"</span>} */}
               </div>
               <div className="login__with-g-g">
-                <div
-                  className="login__with github"
-                >
+                <div className="login__with github">
                   <picture>
                     <i className="bx bxl-github"></i>
                   </picture>
                   <span>Registrarse con GitHub</span>
                 </div>
-                <div
-                  className="login__with google"
-                >
+                <div className="login__with google">
                   <picture>
                     <i className="bx bxl-google"></i>
                   </picture>

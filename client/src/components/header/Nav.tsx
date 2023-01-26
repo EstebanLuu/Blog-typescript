@@ -11,7 +11,9 @@ const Nav = () => {
             Blog<span className="main">Typescript</span>
           </span>
         </Link>
-        <button className="nav__login">Login</button>
+        <Link to="/auth/login" className="nav__link">
+          <button className="nav__login">Login</button>
+        </Link>
       </div>
     </div>
   );

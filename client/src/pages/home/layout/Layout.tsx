@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { Categories } from "./Categories";
 import "./Layout.scss";
-import nico from "../../../assets/nico__img.jpg";
-import jose from "../../../assets/jose__img.jpg";
-import tomi from "../../../assets/tomi__img.jpg";
-import post__img from "../../../assets/post__img.jpg";
 import { Link } from "react-router-dom";
 
 const Layout = () => {
